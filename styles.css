@@ -1,0 +1,671 @@
+/* Reset styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  letter-spacing: -1px;
+  line-height: 1.6;
+  background-color: #fff;
+  color: #000;
+  scroll-behavior: smooth; /* Aktiverar mjuk scrollning */
+  cursor: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="%232e34f5ff" /></svg>') 8 8, auto; /* Standard muspekare */
+}
+
+/* Hover effekt för större muspekare */
+a:hover, .nav ul li a:hover {
+  cursor: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" fill="%232e34f5ff" /></svg>') 12 12, auto; /* Större pekare vid hover */
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 1000;
+  padding: 0 1rem;
+}
+
+/* Logo styling */
+.logo {
+  margin-top: 0.5rem;
+  margin-left: 1rem;
+}
+
+.logo img {
+  max-width: 120px;
+  height: auto;
+}
+
+/* Navigation styling */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  color: #000;
+  font-weight: 300;
+}
+
+.nav ul li a:hover {
+  color: #919191;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Vertikala streck under menyn */
+.vertical-lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 175px;
+  margin-top: 4rem;
+  padding: 0 1rem;
+}
+
+.vertical-lines div {
+  width: 1px;
+  height: 175px;
+  background-color: #000;
+  margin: 0 2px;
+}
+
+#hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  max-width: 100%;
+  overflow-x: hidden; /* Förhindrar horisontell scrollning */
+}
+
+#hero .text {
+  flex: 1;
+  max-width: 60%; /* Begränsar textens bredd i datorvy */
+  padding: 0;
+  margin: 0;
+}
+
+#hero .text h1,
+#hero .text h2 {
+  margin: 16px;
+  text-align: left;
+}
+
+#hero .video {
+  flex-shrink: 0;
+  margin: 16px;
+  width: 40%; /* Begränsar videons bredd */
+  max-width: 600px; /* Säkerställer att videon inte blir för bred */
+  height: auto; /* Bevarar proportionerna */
+  overflow: hidden;
+}
+
+#hero .video video {
+  width: 100%; /* Anpassar bredden till föräldern */
+  height: auto; /* Bevarar proportionerna */
+  object-fit: cover; /* Passar videon inom utrymmet */
+}
+
+/* Headings styling */
+.section h1 {
+  font-size: 78px;
+  color: #000;
+  font-weight: normal;
+  letter-spacing: -4px;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.section h2 {
+  font-size: 78px;
+  color: #919191;
+  font-weight: normal;
+  letter-spacing: -4px;
+  line-height: 0.9;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+.section p {
+  color: #919191;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+}
+.section {
+padding-bottom: 90px;
+padding-left: 16px;
+padding-right: 16px;
+padding-top: 90px;
+}
+.section-spacing {
+  margin-top: 1.5rem; /* Skapar avstånd mellan paragrafen ovan och denna */
+}
+.team {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 kolumner, jämnt fördelade */
+  gap: 1rem; /* Mellanrum mellan bilder */
+}
+.member img {
+    width: 100%; /* Gör så att bilder fyller sin kolumn */
+    height: auto; /* Bevarar bildens proportioner */
+}
+
+.member h3 {
+  font-size: 18px;
+  color: #000;
+  text-align: left;
+  font-weight: 300;
+  letter-spacing: -1px;
+  margin-top: 10px;
+}
+
+.member h4 {
+  font-size: 18px;
+  color: #919191;
+  text-align: left;
+  font-weight: 300;
+  letter-spacing: -1px;
+}
+/* Portfolio styling */
+.portfolio {
+  display: flex; /* Gör så att bilder och text ligger på rad */
+  gap: 1.5rem; /* Mellanrum mellan bilder och text */
+  justify-content: flex-start; /* Vänsterjusterar innehållet */
+}
+
+.company {
+  text-align: left; /* Justerar texten till vänster */
+  flex: 1; /* Gör varje item lika stort */
+}
+
+.company img {
+  width: 100%; /* Gör att bilden fyller sin container */
+  height: 100%; /* Bevarar proportionerna */
+  object-fit: cover; /* Beskär vid behov för att fylla containern */
+}
+
+.company h3 {
+  font-size: 18px;
+  color: #000;
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.company h4 {
+  font-size: 18px;
+  color: #919191;
+  font-weight: 300;
+}
+
+.highlight {
+  color: #000;
+  font-weight: 400;
+}
+
+/* Footer styling */
+.footer {
+  background-color: #1b1b1b;
+  color: #fff;
+  padding-bottom: 240px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 90px;
+  }
+.footer h1 {
+  font-size: 78px;
+  font-weight: normal;
+  letter-spacing: -4px;
+  line-height: 0.9;
+  margin-bottom: 4rem;
+  margin-top: 2rem;
+}
+.footer p {
+  color: #fff;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+}
+.footer a {
+  color: #fff;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 1;
+}
+.footer-spacing {
+  margin-top: 8rem; /* Justerar avståndet mellan text och e-postadress */
+}
+/* Standard styling för vertikala linjer */
+.vertical-lines {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 175px;
+  margin-top: 4rem;
+  padding: 0 1rem;
+}
+
+.vertical-lines div {
+  width: 1px;
+  height: 175px;
+  background-color: #000;
+  margin: 0 2px;
+}
+
+/* Mobilanpassning: Färre linjer och större mellanrum */
+@media (max-width: 768px) {
+  .vertical-lines {
+    justify-content: space-around; /* Större mellanrum */
+    height: 150px; /* Justera höjden om nödvändigt */
+    margin-top: 2rem; /* Minska marginalen för att passa mindre skärmar */
+  }
+
+  .vertical-lines div {
+    display: none; /* Göm överflödiga linjer */
+  }
+  /* Visa färre linjer */
+  .vertical-lines div:nth-child(4n) {
+    display: block; /* Visa endast var fjärde linje */
+  }
+}
+/* Styla hamburgarmenyn */
+.hamburger {
+  display: none; /* Dölj som standard */
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1001; /* Se till att den ligger ovanpå */
+}
+
+/* Dölj navigationsmenyn i mobil */
+.nav {
+  display: flex;
+  justify-content: center;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Visa hamburgarmenyn i mobil */
+  }
+
+  .nav ul {
+    display: none; /* Dölj menyn som standard */
+    flex-direction: column;
+    gap: 0; /* Inga gap mellan länkar i mobil */
+    position: absolute;
+    top: 4rem; /* Placera under headern */
+    left: 0;
+    width: 100%; /* Full bredd */
+    background: #fff; /* Bakgrundsfärg för menyn */
+    padding: 1rem 0;
+  }
+
+  .nav ul.active {
+    display: flex; /* Visa menyn när den är aktiv */
+  }
+
+  .nav ul li {
+    text-align: center;
+    padding: 1rem 0;
+  }
+
+  .nav ul li a {
+    font-size: 1.2rem;
+    color: #000;
+  }
+}
+.hamburger {
+  display: none; /* Döljs på större skärmar */
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001; /* Gör att den ligger ovanför andra element */
+  position: absolute;
+  top: 1rem; /* Placering från toppen */
+  right: 1rem; /* Placering från höger */
+}
+
+.hamburger svg rect {
+  fill: #000; /* Svart färg på linjerna */
+  height: 1px; /* Tunnare linjer */
+  width: 24px; /* Bredd på linjerna */
+}
+
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* Visa hamburgarmenyn på mindre skärmar */
+  }
+
+  .nav ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem; /* Placeras under header */
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 1rem 0;
+  }
+
+  .nav ul.active {
+    display: flex;
+  }
+  #hero {
+    flex-direction: column; /* Byter layout till vertikal */
+    align-items: center; /* Centrerar innehållet */
+  }
+
+  #hero .text {
+    max-width: 100%; /* Gör texten mer responsiv i mobil */
+    text-align: left; /* Centrerar texten */
+    margin-bottom: 1rem; /* Lägger till avstånd mellan text och video */
+  }
+
+  #hero .video {
+    width: 100%; /* Videon fyller hela bredden */
+    max-width: 100%; /* Säkerställer att den inte överskrider skärmens bredd */
+    padding: 0 1rem; /* Lägger till lite padding för marginaler */
+  }
+  .footer h1 {
+    font-size: 48px;
+    font-weight: normal;
+    letter-spacing: -4px;
+    line-height: 0.9;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+  }
+  .footer p {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .footer a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .section h1 {
+    font-size: 48px;
+    color: #000;
+    font-weight: normal;
+    letter-spacing: -4px;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .section h2 {
+    font-size: 48px;
+    color: #919191;
+    font-weight: normal;
+    letter-spacing: -4px;
+    line-height: 0.9;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+  }
+  .section p {
+    color: #919191;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1;
+  }
+}
+@media (max-width: 768px) {
+  .nav ul {
+    display: flex; /* Behåll flex */
+    flex-direction: column;
+    position: fixed;
+    top: 4rem; /* Precis under headern */
+    left: 0;
+    width: 100%; /* Täck hela sidbredden */
+    height: calc(100% - 4rem); /* Täck sidan under headern */
+    background: #fff;
+    padding: 2rem 0;
+    z-index: 1000;
+    justify-content: flex-start;
+    transform: translateY(-100%); /* Skjuter bort menyn från skärmen */
+    transition: transform 0.4s ease-in-out; /* Övergång för öppning/stängning */
+  }
+
+  .nav ul.active {
+    transform: translateY(0); /* Flyttar tillbaka menyn på plats */
+  }
+
+  .nav ul li {
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav ul li:last-child {
+    margin-bottom: 0;
+  }
+
+  .nav ul li a {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding-left: 32px;
+  }
+  /* Justera Team */
+  .team {
+    display: flex; /* Byter från grid till flex */
+    flex-direction: column; /* Gör att elementen staplas vertikalt */
+    gap: 1.5rem; /* Lägg till mellanrum mellan medlemmarna */
+    align-items: center; /* Centrerar innehållet */
+  }
+
+  .member {
+    width: 100%; /* Gör varje medlem fullbredd */
+    text-align: center; /* Centrerar texten */
+  }
+
+  .member img {
+    max-width: 100%; /* Gör bilderna mindre i mobilvy */
+    margin: 0 auto; /* Centrerar bilden */
+  }
+
+  /* Justera Portfolio */
+  .portfolio {
+    display: flex; /* Byter från radvis layout till flex */
+    flex-direction: column; /* Gör att företagen staplas vertikalt */
+    gap: 1.5rem; /* Lägg till mellanrum mellan företagen */
+    align-items: center; /* Centrerar innehållet */
+  }
+
+  .company {
+    width: 100%; /* Gör varje företag fullbredd */
+    text-align: left; /* Centrerar texten */
+  }
+
+  .company img {
+    max-width: 100%; /* Gör bilderna mindre i mobilvy */
+    aspect-ratio: 2 / 1; /* Höjden blir 50% av bredden */
+    object-fit: cover; /* Passar in bilden snyggt */
+    margin: 0 auto; /* Centrerar bilden horisontellt */
+  }
+}
+/* Justera header och logga i mobil */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 4rem;
+  z-index: 1001; /* Sätt högre än navigationsmenyn */
+  padding: 0 1rem;
+}
+
+.logo {
+  z-index: 1002; /* Sätt högre än hamburgarmenyn */
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: fixed;
+  top: 4rem; /* Placera precis under header */
+  left: 0;
+  width: 100%;
+  height: calc(100% - 4rem); /* Täck hela sidan under header */
+  background: #fff;
+  padding: 1rem 0;
+  transform: translateY(-100%); /* Döljer menyn */
+  transition: transform 0.4s ease-in-out;
+  z-index: 1000; /* Under loggan */
+}
+/* Desktop menu visibility fix */
+@media (min-width: 769px) {
+  .hamburger {
+    display: none; /* Dölj hamburgarmenyn */
+  }
+
+  .nav {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Centrera menyn horisontellt */
+    align-items: center; /* Centrera menyn vertikalt i headern */
+  }
+
+  .nav ul {
+    display: flex; /* Visa menyn i datorversionen */
+    flex-direction: row; /* Menyn på rad */
+    position: static; /* Placera menyn normalt */
+    background: none; /* Ingen bakgrund */
+    padding: 0; /* Ingen extra padding */
+    transform: none; /* Ingen transformering */
+    height: auto; /* Standardhöjd */
+    gap: 2rem; /* Öka avstånd mellan länkar */
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  .nav ul li {
+    list-style: none; /* Ingen punktlista */
+    padding: 0;
+    margin: 0; /* Ta bort eventuella marginaler */
+  }
+
+  .nav ul li a {
+    font-size: 1rem; /* Normal fontstorlek */
+    text-align: center;
+    padding: 0;
+    text-decoration: none; /* Ingen understrykning */
+    color: #000; /* Svart textfärg */
+  }
+
+  .nav ul li a:hover {
+    color: #919191; /* Grå färg vid hover */
+    transition: color 0.3s ease-in-out; /* Mjuk övergång */
+  }
+
+}
+@media (max-width: 812px) and (orientation: landscape) {
+  .team {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Återgå till tre kolumner */
+    gap: 1rem;
+    align-items: start; /* Justerar vertikal position */
+  }
+
+  .member {
+    width: auto; /* Tillbaka till standardbredd */
+    text-align: left; /* Vänsterjustera texten */
+  }
+
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Två kolumner för företag */
+    gap: 1.5rem;
+    align-items: start;
+  }
+
+  .company {
+    width: auto; /* Tillbaka till standardbredd */
+    text-align: left; /* Vänsterjustera texten */
+  }
+    #hero {
+      flex-direction: row; /* Ändra layouten till radvis */
+      justify-content: flex-start; /* Placera innehållet från vänster */
+      align-items: center; /* Centrera innehållet vertikalt */
+      padding: 0 1rem; /* Säkerställ att det finns marginal från kanterna */
+    }
+  
+    #hero .text {
+      max-width: 50%; /* Begränsa textens bredd för att ge plats för videon */
+      text-align: left; /* Säkerställ vänsterjusterad text */
+      margin: 0; /* Ta bort extra marginaler */
+    }
+  
+    #hero .video {
+      flex-shrink: 0;
+      width: 50%; /* Gör videon lika bred som texten */
+      max-width: 50%; /* Begränsa till hälften av tillgänglig bredd */
+      height: auto; /* Bevarar proportionerna */
+      margin: 0; /* Justerar bort onödig marginal */
+    }
+  }
+  @media (max-width: 812px) and (orientation: landscape) {
+    .nav ul {
+      display: none;
+      flex-direction: column;
+      position: fixed;
+      top: 4rem; /* Placera precis under header */
+      left: 0;
+      width: 100%; /* Täcker hela bredden */
+      height: calc(100% - 4rem); /* Täck hela sidan under header */
+      overflow-y: auto; /* Aktivera rullning om innehållet är för långt */
+      background: #fff; /* Bakgrundsfärg för menyn */
+      padding: 0.5rem 0; /* Mindre padding runt menyn */
+      transform: translateY(-100%); /* Dölj menyn initialt */
+      transition: transform 0.4s ease-in-out; /* Mjuk öppning/stängning */
+      z-index: 1000; /* Placera menyn ovanför annat innehåll */
+    }
+  
+    .nav ul.active {
+      transform: translateY(0); /* Visa menyn när den är aktiv */
+    }
+  
+    .nav ul li {
+      text-align: center;
+      padding: 0.3rem 0; /* Minskad padding över och under varje artikel */
+      margin: 0; /* Ingen extra marginal mellan artiklar */
+    }
+  
+    .nav ul li a {
+      font-size: 1.5rem;
+      color: #000;
+    }
+  }
