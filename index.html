@@ -296,11 +296,8 @@
         // Scrolla till toppen när loggan klickas
         logo.addEventListener("click", (e) => {
           e.preventDefault(); // Hindra standardlänkhantering
-          document.querySelector("body").scrollIntoView({
-            behavior: "smooth",
-            block: "start",
-          });
-          navMenu.classList.remove("active"); // Stäng menyn
+          window.scrollTo({ top: 0, behavior: "smooth" }); // <-- ny rad
+          navMenu.classList.remove("active"); 
         });
       });
     </script>
